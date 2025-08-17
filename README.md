@@ -37,3 +37,31 @@ Este proyecto demuestra cómo combinar **automatización, análisis y reporting*
    pip install pandas sqlalchemy openpyxl
 
 2. Ejecuta el kpis_ventas.py y te devolcerá el resultado de las consultas en gráficas
+
+## Diagrama del Proceso
+
++---------------------+
+|   CSV / DataFrame   |
+|   (sales)           |
++---------+-----------+
+          |
+          |  Cargar en SQLAlchemy / SQLite
+          v
++---------------------+
+|   Base de Datos     |
+|   (simulada)        |
++---------+-----------+
+          |
+          |  Funciones de consulta (consultas.py)
+          v
++---------------------+
+|   DataFrames        |
+|   resultados SQL    |
++---------+-----------+
+          |
+          |  Generar gráficos (kpis_ventas.py)
+          v
++---------------------+
+|   Visualización     |
+|   KPIs / Gráficos   |
++---------------------+
